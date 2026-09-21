@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Vishal Nation | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #2e3192; /* Deep blue from the reference spheres */
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            /* Using the exact portrait background image provided */
+            background-image: url('https://lh3.googleusercontent.com/pw/AP1GczOMju-HCrdeh_xtgPWkTC4cCnXsFvW93qqjf4uhIvhoovb8l25OI-RZS5eljBNY6Gg7eGsMKh9pBpfQATJRIIRJgkxWchirg1lmt6Vbij1DAqOWroqaMfbFGeTZhVC3OXdX-paGRFwsM3YIRQhT2_4=w502-h900-s-no-gm?authuser=0');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            height: 100dvh; /* Mobile viewport fix */
+            width: 100%;
+            overflow: hidden; /* Prevents any scrolling */
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Top Header Area for Logo */
+        header {
+            padding: env(safe-area-inset-top, 24px) 24px 0 24px;
+            display: flex;
+            justify-content: flex-start;
+            z-index: 10;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ai-logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            background: #fff;
+        }
+
+        .brand-name {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+
+        /* Main Content Positioning */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 32px;
+            z-index: 10;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 46px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            letter-spacing: -1.5px;
+            /* Subtle shadow to separate from background */
+            text-shadow: 0 4px 20px rgba(255,255,255,0.6); 
+        }
+
+        .h1-dark {
+            color: var(--text-main);
+        }
+
+        h2 {
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .domain-text {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            margin-bottom: 36px;
+            text-transform: lowercase;
+            display: inline-block;
+            background: rgba(255,255,255,0.5);
+            padding: 4px 10px;
+            border-radius: 8px;
+            backdrop-filter: blur(4px);
+        }
+
+        /* Professional CTA Button */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--primary-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 36px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 15px 35px rgba(46, 49, 146, 0.25);
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            width: fit-content;
+        }
+
+        .cta-btn:active {
+            transform: scale(0.96);
+            box-shadow: 0 5px 15px rgba(46, 49, 146, 0.2);
+        }
+
+        .cta-btn i {
+            font-size: 14px;
+            transition: transform 0.3s;
+        }
+
+        .cta-btn:hover i {
+            transform: translateX(4px);
+        }
+
+        /* Bottom Social Icons area to match desktop reference */
+        footer {
+            padding: 0 32px calc(24px + env(safe-area-inset-bottom, 0px)) 32px;
+            display: flex;
+            gap: 16px;
+            z-index: 10;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+
+        .social-icon:active {
+            transform: scale(0.9);
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczNNy6K-9lCocuk3TXbCh_3suoAh_tY9BTfrqmsztRYeTeIPZG50LekeVO7ptu81oHqC3GEdn5P2mxNUUaG3F6ZDTwJSzkc0c-2G1ROjzM4cJxlyRqwXmVGhUstfHUEBqcGjJ_mPCtooIu-xFpqZHSE=w632-h659-s-no-gm?authuser=0" alt="ChatWave AI" class="ai-logo">
+            <span class="brand-name">ChatWave</span>
+        </div>
+    </header>
+
+    <main>
+        <h1><span class="h1-dark">Hello &</span><br>Welcome</h1>
+        <h2>to Vishal Nation</h2>
+        <span class="domain-text">vishalsurya.com</span>
+        
+        <a href="https://www.vishalsurya.com" class="cta-btn">
+            More Info <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </main>
+
+    <footer>
+        <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+    </footer>
+
+</body>
+</html>
